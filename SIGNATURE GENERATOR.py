@@ -8,6 +8,7 @@ from matplotlib.animation import FuncAnimation
 def resize(img):
         return cv2.resize(img,(512,512)) # arg1- input image, arg- output_width, output_height
     
+
 cap=cv2.VideoCapture("Videos/Jose_Signature3.MP4")
 # cap=cv2.VideoCapture("Videos/Carlos_Signature.MP4")
 # cap=cv2.VideoCapture("Videos/Burzin_Signature.MOV")
@@ -64,8 +65,9 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('s'):
         break
  
-#--------Scale--------
-sf = 0.13   
+#--------Scale/Random--------
+sf=random.choice([1, 1.1, 1.2, 1.3, 1.4])
+# sf = 0.13   
 
 # --------Randomization--------
 x_random=[]
@@ -173,4 +175,5 @@ genGCode(x,y)
     
 cap.release()
 cv2.destroyAllWindows()
+
 
