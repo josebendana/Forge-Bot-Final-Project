@@ -66,7 +66,7 @@ while True:
         break
  
 #--------Scale/Random--------
-sf=random.choice([1, 1.1, 1.2, 1.3, 1.4])
+sf=random.choice([0.1, 0.11, 0.12, 0.13, 0.14])
 # sf = 0.13   
 
 # --------Randomization--------
