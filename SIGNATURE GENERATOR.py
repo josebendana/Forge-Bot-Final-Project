@@ -9,6 +9,7 @@ def resize(img):
         return cv2.resize(img,(512,512)) # arg1- input image, arg- output_width, output_height
     
 
+# cap=cv2.VideoCapture("ballmotion.m4v")
 cap=cv2.VideoCapture("Videos/Jose_Signature3.MP4")
 # cap=cv2.VideoCapture("Videos/Carlos_Signature.MP4")
 # cap=cv2.VideoCapture("Videos/Burzin_Signature.MOV")
@@ -77,18 +78,18 @@ temp=0
 for i in range(len(x_coord)):
     
     if i==round(len(x_coord)/15)*temp:
-        choise=random.randint(1, 3)
+        choice=random.randint(1, 3)
         temp=temp+1
 
-    if choise==1:
+    if choice==1:
         off = random.randint(3, 4)
         x_random.append(x_coord[i]+off)
         y_random.append(y_coord[i]+off)
-    if choise==2:
+    if choice==2:
         off = random.randint(-4, -3)
         x_random.append(x_coord[i]+off)
         y_random.append(y_coord[i]+off)
-    if choise==3:
+    if choice==3:
         x_random.append(x_coord[i])
         y_random.append(y_coord[i])
 
@@ -175,5 +176,3 @@ genGCode(x,y)
     
 cap.release()
 cv2.destroyAllWindows()
-
-
