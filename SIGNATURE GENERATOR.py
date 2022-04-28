@@ -9,7 +9,6 @@ def resize(img):
         return cv2.resize(img,(512,512)) # arg1- input image, arg- output_width, output_height
     
 
-# cap=cv2.VideoCapture("ballmotion.m4v")
 cap=cv2.VideoCapture("Videos/Jose_Signature3.MP4")
 # cap=cv2.VideoCapture("Videos/Carlos_Signature.MP4")
 # cap=cv2.VideoCapture("Videos/Burzin_Signature.MOV")
@@ -163,7 +162,7 @@ for val in y_rand:
     y_rdm.append((val+offset_rand)*sf)
 
 def genGCode(x,y):
-    with open('Gcode/GCode_Jose_Signature.txt', 'w') as f:
+    with open('GCode_Jose_Signature.txt', 'w') as f:
         f.write('G21 ; mm-mode\nG0 Z0; move to z-safe height\nG92 F1000 X{x0:.4f} Y{y0:.4f}\nM3S0\nG4 P0.5; Tool On\nG1 F300 Z-0.1000\n'.format(x0 = x[0], y0 = y[0]))
         x.pop(0)
         y.pop(0)
@@ -176,3 +175,5 @@ genGCode(x,y)
     
 cap.release()
 cv2.destroyAllWindows()
+
+
