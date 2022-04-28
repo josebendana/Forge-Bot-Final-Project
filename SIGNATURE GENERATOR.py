@@ -8,9 +8,7 @@ from matplotlib.animation import FuncAnimation
 def resize(img):
         return cv2.resize(img,(512,512)) # arg1- input image, arg- output_width, output_height
     
-
-# cap=cv2.VideoCapture("ballmotion.m4v")
-cap=cv2.VideoCapture("Videos/Jose_Signature2.MOV")
+cap=cv2.VideoCapture("Videos/Jose_Signature3.MP4")
 # cap=cv2.VideoCapture("Videos/Carlos_Signature.MP4")
 # cap=cv2.VideoCapture("Videos/Burzin_Signature.MOV")
 
